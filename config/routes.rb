@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 	root 'pages#home'
 
 	get 'pages/erb_demo'
+
+	get 'pages/render_demo'
 end
