@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 	get 'pages/erb_demo'
 
 	get 'pages/render_demo'
+
+	get 'pages/redirect_demo'
 end

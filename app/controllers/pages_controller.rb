@@ -8,4 +8,8 @@ class PagesController < ApplicationController
 	def render_demo
 		render :home
 	end
+
+	def redirect_demo
+		redirect_to(action: 'home')
+	end
 end
