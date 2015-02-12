@@ -1,2 +1,5 @@
-<h1>Categories#edit</h1>
-<p>Find me in app/views/categories/edit.html.erb</p>
+<h5>Edit<%= " #{@category.id}" %></h5>
+<p>origin:</p>
+<p><%= @category.name %></p>
+<p><%= @category.url %></p>
+<%= render 'form' %>
