@@ -1,10 +1,11 @@
-<h4>Index of Categories</h4>
-<% @categories.each do |category| %>
-<div>
-	<p>Name: </p>
-	<%= "\"#{category.name}\""%>
-	<p>URL: </p>
-	<%= category.url %>
-	<hr>
-</div>
-<% end %>
+    <% @categories.each do |category| %>
+        <p><%= category.name %></p>
+           <p><%=category.url%></p>
+        <%= link_to 'Show', category %>
+        <%= link_to 'Edit', edit_category_path(category) %>
+        <%= link_to 'Delete', categories_delete_path(:id => category.id) %>
+    <% end %>
+
+<br>
+<%= link_to 'New Category', new_category_path %>
+
