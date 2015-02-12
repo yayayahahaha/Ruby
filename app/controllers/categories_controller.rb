@@ -35,6 +35,12 @@ class CategoriesController < ApplicationController
   end
 
   def delete
+    @category = Category.find(params[:id])
+  end
+  
+  def destroy
+    Category.find(params[:id]).destroy
+    redirect_to(:action => 'index')
   end
 
 	private

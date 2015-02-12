@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get 'categories/delete'
 =end
 
-	resources(:categories)
-	get 'categories/:id/delete' => 'cateogries#delete', :as => 	:categories_delete
+	resources :categories
+	get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
 	#resources can create the following "get" method up there and create some "helper" I'm not sure what is that
 	#notice that the "resource's' "
 
