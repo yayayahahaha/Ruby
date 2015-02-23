@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+=begin
   get 'products/index'
 
   get 'products/show'
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'products/delete'
 
-=begin
+
   get 'categories/index'
 
   get 'categories/show'
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
 
   get 'categories/delete'
 =end
+	resources(:products)
+	get("products/:id/delete" => "products#delete", :as => :products_delete)
 
 	resources :categories
 	get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
