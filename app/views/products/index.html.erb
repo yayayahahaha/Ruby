@@ -1,2 +1,19 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>Product Index</h1>
+<% @products.each do |product| %>
+
+<p style="font-weight: bold;">product name: </p>
+<%= product.product_name %>
+<br>
+
+<p style="font-weight: bold;">description: </p>
+<%= product.description %>
+<br>
+
+<p style="font-weight: bold;">price: </p>
+<%= product.price %>
+<br>
+
+<p style="font-weight: bold;">url: </p>
+<%= product.url %>
+<hr>
+<% end %>
