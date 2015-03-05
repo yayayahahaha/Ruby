@@ -1,18 +1,23 @@
 <%= form_for(@product) do |f| %>
 
   <div class="product_name">
+    product_name: 
 		<%= f.text_field :product_name %>
   </div>
   <div class="description">
+  description: 
     <%= f.text_field :description %>
   </div>
   <div class="price">
+  price: 
     <%= f.text_field :price %>
   </div>
   <div class="url">
+  url: 
     <%= f.url_field :url %>
   </div>
   <div class="actions">
+  actions: 
     <%= f.submit %>
   </div>
 <% end %>
