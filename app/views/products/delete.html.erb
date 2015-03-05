@@ -1,2 +1,23 @@
-<h1>Products#delete</h1>
-<p>Find me in app/views/products/delete.html.erb</p>
+<p>
+  <strong>Product name:</strong>
+	<%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+	<%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+	<%= @product.price %>
+</p>
+
+<p>
+  <strong>Thumburl:</strong>
+	<%= @product.url %>
+</p>
+
+<%= link_to 'Delete', products_delete_path(:id => @product.id) %> |
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
